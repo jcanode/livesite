@@ -1,32 +1,67 @@
 import React from 'react'
 import Link from 'next/link'
+//import { HUE } from '@material-ui/core/colors/HUE';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import AppBar from '@material-ui/core/AppBar';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import theme from './theme'
 
-const links = [
-  { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
 
-const Nav = () => (
+//const color = purple[900];
+
+
+// const links = [
+//   { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
+// ].map(link => {
+//   link.key = `nav-link-${link.href}-${link.label}`
+//   return link
+// })
+
+const links = {
+  href: 'https://github.com/jcanode',
+  label:'Github'
+  }
+
+const useStyles = makeStyles(theme => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+  input: {
+    display: 'none',
+  },
+}));
+
+export default function Nav() {
+  const classes = useStyles();
+
+
+return   (
   <nav>
+  <MuiThemeProvider theme={theme}>
+
+    <AppBar position="static">
     <ul>
       <li>
-        <Link prefetch href="/">
-          <a>Home</a>
-        </Link>
+        <Button variant="outlined"  href="/" className={classes.button}>
+        Home
+      </Button>
+      </li>
+      <li>
+        <Button variant="outlined" href="/about" className={classes.button}>
+          about
+        </Button>
       </li>
       <ul>
-        {links.map(({ key, href, label }) => (
-          <li key={key}>
-            <Link href={href}>
-              <a>{label}</a>
-            </Link>
+          <li>
+            <Button variant="outlined"  href={links.href} className={classes.button}>
+              {links.label}
+            </Button>
           </li>
-        ))}
       </ul>
     </ul>
-
+    </AppBar>
+    </MuiThemeProvider>
     <style jsx>{`
       :global(body) {
         margin: 0;
@@ -56,4 +91,6 @@ const Nav = () => (
   </nav>
 )
 
-export default Nav
+    }
+
+//export default Nav
