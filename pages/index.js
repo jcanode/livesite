@@ -42,7 +42,7 @@ const Home = () => (
     <style jsx>{`
       .hero {
         width: 100%;
-        color: #333;
+        color: #000;
       }
       .title {
         margin: 0;

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
+import Switch from '@material-ui/core/Switch';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import theme from './theme'
 
@@ -34,6 +35,14 @@ const useStyles = makeStyles(theme => ({
 
 export default function Nav() {
   const classes = useStyles();
+  const [state, setState] = React.useState({
+    checkedA: true,
+    checkedB: true,
+  });
+
+  const handleChange = name => event => {
+    setState({ ...state, [name]: event.target.checked });
+  };
 
 
 return   (
@@ -62,6 +71,15 @@ return   (
     </ul>
     </AppBar>
     </MuiThemeProvider>
+    <div className="darkmode">
+ <Switch
+        checked={state.checkedA}
+        onChange={handleChange('checkedA')}
+        value="checkedA"
+        label="Darkmode"
+        inputProps={{ 'aria-label': 'secondary checkbox' }}
+      />
+  </div>
     <style jsx>{`
       :global(body) {
         margin: 0;
@@ -69,6 +87,9 @@ return   (
           Helvetica, sans-serif;
       }
       nav {
+       text-align: right;
+      }
+      darkmode{
         text-align: center;
       }
       ul {
@@ -88,7 +109,10 @@ return   (
         font-size: 13px;
       }
     `}</style>
+    
+
   </nav>
+
 )
 
     }
