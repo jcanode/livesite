@@ -34,15 +34,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Nav() {
-  const classes = useStyles();
-  const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true,
-  });
+  // const classes = useStyles();
+  // const [state, setState] = React.useState({
+  //   checkedA: true,
+  //   checkedB: true,
+  // });
 
-  const handleChange = name => event => {
-    setState({ ...state, [name]: event.target.checked });
-  };
+  // const handleChange = name => event => {
+  //   setState({ ...state, [name]: event.target.checked });
+  // };
 
 
 return   (
@@ -72,13 +72,13 @@ return   (
     </AppBar>
     </MuiThemeProvider>
     <div className="darkmode">
- <Switch
+ {/* <Switch
         checked={state.checkedA}
         onChange={handleChange('checkedA')}
         value="checkedA"
         label="Darkmode"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
-      />
+    /> */}
   </div>
     <style jsx>{`
       :global(body) {

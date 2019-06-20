@@ -1,12 +1,63 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'next/link'
+import classNames from 'classnames'
+import {withStyles} from '@material-ui/styles'
 import Head from '../components/head'
 import Nav from '../components/nav'
+import Switch from '@material-ui/core/Switch';
 
-const Home = () => (
-  <div>
+const classes = withStyles();
+
+
+
+
+// const [state, setState] = React.useState({
+//     checkedA: true,
+//     checkedB: true,
+// });
+  
+//  handleChange = name => event => {
+//     setState({ ...state, [name]: event.target.checked });
+// };
+export default class Home extends React.Component {
+
+  constructor(){
+    super();
+    this.setState = {
+      Darkmode: false,
+      checkedB: true,
+    }
+  }
+
+      
+  handleChange = name => event => {
+    let mode = this.state.Darkmode;
+    mode[name] = event.target.value;
+    this.setState({Darkmode: true});
+    
+
+  };
+
+
+  render(){
+    let {classes} = this.props;
+    let darkClass = {}
+    if(this.state.Darkmode){
+      darkClass[classes.Dark] = true;
+    }else{
+      darkClass[classes.Dark] = false;
+    }
+    return(
+  <div className={classNames(classes.Dark)}>
     <Head title="Home" />
     <Nav />
+    <Switch
+        checked={this.setState.Darkmode}
+        onChange={handleChange('Darkmode')}
+        value="Darkmode"
+        label="Darkmode"
+        inputProps={{ 'aria-label': 'secondary checkbox' }}
+    />
 
     <div className="hero">
       <h1 className="title">Welcome to Next!</h1>
@@ -38,7 +89,7 @@ const Home = () => (
         </Link>
       </div>
     </div>
-
+    )
     <style jsx>{`
       .hero {
         width: 100%;
@@ -84,8 +135,14 @@ const Home = () => (
         font-size: 13px;
         color: #333;
       }
+
+      Dark: {
+        background: #00000,
+      }
     `}</style>
   </div>
-)
+    )
+    }
+  }
 
-export default Home
+//export default Home
