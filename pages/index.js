@@ -30,34 +30,35 @@ export default class Home extends React.Component {
   }
 
       
-  handleChange = name => event => {
-    let mode = this.state.Darkmode;
-    mode[name] = event.target.value;
-    this.setState({Darkmode: true});
+  // handleChange = name => event => {
+  //   let mode = this.state.Darkmode;
+  //   mode[name] = event.target.value;
+  //   this.setState({Darkmode: true});
     
 
-  };
+  // };
 
 
   render(){
-    let {classes} = this.props;
+  //  let {classes} = this.props;
     let darkClass = {}
-    if(this.state.Darkmode){
-      darkClass[classes.Dark] = true;
-    }else{
-      darkClass[classes.Dark] = false;
-    }
+    // if(classes.Darkmode){
+    //   darkClass[classes.Dark] = true;
+    // }else{
+    //   darkClass[classes.Dark] = false;
+    // }
     return(
-  <div className={classNames(classes.Dark)}>
-    <Head title="Home" />
+  // <div className={classNames(classes.Dark)}>
+ <div>
+  <Head title="Home" />
     <Nav />
-    <Switch
+    {/* <Switch
         checked={this.setState.Darkmode}
         onChange={handleChange('Darkmode')}
         value="Darkmode"
         label="Darkmode"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
-    />
+    /> */}
 
     <div className="hero">
       <h1 className="title">Welcome to Next!</h1>

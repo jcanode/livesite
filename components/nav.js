@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Nav() {
-  // const classes = useStyles();
+  const classes = useStyles();
   // const [state, setState] = React.useState({
   //   checkedA: true,
   //   checkedB: true,

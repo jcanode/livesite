@@ -1,22 +1,70 @@
 import React from 'react'
 import Link from 'next/link'
+import { withStyles } from '@material-ui/core/styles'
+
+import background from '../components/background'
 import Head from '../components/head'
 import Nav from '../components/nav'
 
+// const styles = theme => ({
+//   img:{
+//     //  //  backgroundposition: center,
+//     //   //backgroundrepeat: no-repeat,
+//     //   height: 100,
+//     //   //backgroundSize: cover,
+//    }
+// });
 
-const About = () => (<div><Nav />
-<Head title="Home" />
-<br/>This will be an about me page
-<div className="row"> 
-    
-    <Link href="https://github.com/jcanode">
+
+
+// class About extends React.Component {
+//   constructor(){
+//       super();
+//   }
+
+//   render(){
+//       let {classes} = this.props;
+//       return(
+//           <div>
+//               <img src="/static/sitemars.jpg" className={classes.img}/>
+
+//   <style jsx>{'
+//       .img{
+//       backgroundposition: center,
+//       backgroundrepeat: no-repeat,
+//       height: 100,
+//       backgroundSize: cover,
+//       }
+
+
+//   </style>
+// }
+// </div>
+//       )
+//   }
+
+const About = () => (<div>
+  {/* <Nav />
+<Head title="Home" /> */}
+  {/* <br/>This will be an about me page */}
+  {/* <background /> */}
+  <div className="row">
+    <img classname="image" src="/static/sitemars.jpg" />
+    {/* <Link href="https://github.com/jcanode">
     <a className="card">
         <h3>My github</h3>
         <p>Here's a link to my github most of it's private. But one day therethere will be something.</p>
         </a>
-</Link>
-</div>
-<style jsx>{`
+</Link> */}
+
+  </div>
+  <style jsx>{`
+      .image{
+        // background-position: center,
+        background-repeat: no-repeat,
+        // height: 100vh,
+        background-size: cover,
+      }
       .hero {
         width: 100%;
         color: #000;
@@ -64,4 +112,4 @@ const About = () => (<div><Nav />
     `}</style>
 </div>)
 
-export default About
+export default About;
