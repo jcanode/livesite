@@ -21,8 +21,8 @@ import theme from './theme'
 
 const links = {
   href: 'https://github.com/jcanode',
-  label:'Github'
-  }
+  label: 'Github'
+}
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -45,42 +45,42 @@ export default function Nav() {
   // };
 
 
-return   (
-  <nav>
-  <MuiThemeProvider theme={theme}>
+  return (
+    <nav>
+      <MuiThemeProvider theme={theme}>
 
-    <AppBar position="static">
-    <ul>
-      <li>
-        <Button variant="outlined"  href="/" className={classes.button}>
-        Home
+        <AppBar position="static">
+          <ul>
+            <li>
+              <Button variant="outlined" href="/" className={classes.button}>
+                Home
       </Button>
-      </li>
-      <li>
-        <Button variant="outlined" href="/about" className={classes.button}>
-          about
+            </li>
+            <li>
+              <Button variant="outlined" href="/about" className={classes.button}>
+                about
         </Button>
-      </li>
-      <ul>
-          <li>
-            <Button variant="outlined"  href={links.href} className={classes.button}>
-              {links.label}
-            </Button>
-          </li>
-      </ul>
-    </ul>
-    </AppBar>
-    </MuiThemeProvider>
-    <div className="darkmode">
- {/* <Switch
+            </li>
+            <ul>
+              <li>
+                <Button variant="outlined" href={links.href} className={classes.button}>
+                  {links.label}
+                </Button>
+              </li>
+            </ul>
+          </ul>
+        </AppBar>
+      </MuiThemeProvider>
+      <div className="darkmode">
+        {/* <Switch
         checked={state.checkedA}
         onChange={handleChange('checkedA')}
         value="checkedA"
         label="Darkmode"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
     /> */}
-  </div>
-    <style jsx>{`
+      </div>
+      <style jsx>{`
       :global(body) {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
@@ -109,12 +109,12 @@ return   (
         font-size: 13px;
       }
     `}</style>
-    
 
-  </nav>
 
-)
+    </nav>
 
-    }
+  )
+
+}
 
 //export default Nav
