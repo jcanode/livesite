@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Switch from '@material-ui/core/Switch';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import theme from './theme'
 
 
@@ -47,7 +47,7 @@ export default function Nav() {
 
   return (
     <nav>
-      <MuiThemeProvider theme={theme}>
+      {/* <MuiThemeProvider theme={theme}> */}
 
         <AppBar position="static">
           <ul>
@@ -70,7 +70,7 @@ export default function Nav() {
             </ul>
           </ul>
         </AppBar>
-      </MuiThemeProvider>
+      {/* </MuiThemeProvider> */}
       <div className="darkmode">
         {/* <Switch
         checked={state.checkedA}
