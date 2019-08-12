@@ -8,7 +8,14 @@ import Nav from '../components/nav'
 
 //this will be the authentication page
 const login = () => (
-<div>
+  
+<div className="landingPage">
+<Head title="Login"/>
+      <div className="hero">
+      <Link href="/landing">
+        Back
+      </Link>
+      </div>
       <h1>Welcome to the login page</h1>
         <Input 
         placeholder="username"
@@ -20,8 +27,18 @@ const login = () => (
         />
         <br/>
       <button variant="contained">Submit</button>
+
+    <style jsx>{`:global(body){background-color: #A9A9A9; margin: 0 0 0 0;} .hero {
+        text-align: right;
+        
+        margin:0;
+        //width: 100%;
+        color: #ffffff;
+      }`
+    
+    }</style>
 </div>
 
 )
 
-export default login
+export default login  

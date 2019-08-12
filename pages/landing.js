@@ -11,7 +11,7 @@ const landing  = () => (
     <div className="homeImg">
 
     
-    <Head title="Landing" className="homeImg"/>
+    <Head title="justincanode.com" className="homeImg"/>
     
 	 <div className="hero">
         <Link href="/login">
@@ -19,6 +19,17 @@ const landing  = () => (
             </Link>
 	</div>
     
+    <div className="row">
+    
+          <p className="card">
+            <h1>Welcome</h1>
+            <p>
+            For online documentation and support please refer to 
+            <Link href="https://github.com/jcanode/"> My github</Link>
+            </p>
+          </p>
+        
+    </div> 
     <style jsx>{`
     :global(body) {
        position: relative;
@@ -46,6 +57,36 @@ const landing  = () => (
       }
       .about{
         color: #ffffff;
+      }
+      .row {
+        max-width: 880px;
+        margin: 180px auto 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .card {
+        padding: 18px 18px 24px;
+        width: 300px;
+        text-align: left;
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid #9b9b9b;
+      }
+      
+      .card h3 {
+        margin: 0;
+        color: #fff;
+        font-size: 24px;
+      }
+      .card p {
+        margin: 0;
+        padding: 12px 0 0;
+        font-size: 16px;
+        color: #fff;
+      }
+      .link{
+        color: #fff;
       }
     //   .container {
     //     display: grid;
