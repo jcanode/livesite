@@ -9,28 +9,21 @@ import Nav from '../components/nav'
 const landing  = () => (
 
     <div className="homeImg">
-
-    
-    <Head title="justincanode.com" className="homeImg"/>
-    
-	 <div className="hero">
-        <Link href="/login">
-            Login
-            </Link>
-	</div>
-    
-    <div className="row">
-    
-          <p className="card">
-            <h1>Welcome</h1>
-            <p>
-            For online documentation and support please refer to 
-            <Link href="https://github.com/jcanode/"> My github</Link>
-            </p>
-          </p>
-        
-    </div> 
-    <style jsx>{`
+    <Head title="Landing" className="homeImg"/>
+    <div className="hero">
+     <Link href="/login">Login</Link></div>
+     <div className="row">
+     <p className="card">
+     <h1>Welcome</h1>
+     <p>If you made it to my site, welcome! Theres not much here yet but one there will (hopefully) be more. A bit about me: I am a second year Computer Science Student studying at Grand Canyon University in Phoenix, Arizona. I am passionate about AI and Machine Learning. To view more of my work see my 
+     <Link href="https://github.com/jcanode/"> github.</Link>
+     </p>
+     </p>
+     </div>
+     <div    className="copyRight">
+        Disclamer. Image is from NASA I do not own it.
+        </div>
+        <style jsx>{`
     :global(body) {
        position: relative;
         margin: 0 0 0 0;
@@ -46,7 +39,7 @@ const landing  = () => (
     }
     .hero {
         text-align: right;
-        
+
         margin:0;
         //width: 100%;
         color: #ffffff;
@@ -58,47 +51,22 @@ const landing  = () => (
       .about{
         color: #ffffff;
       }
-      .row {
-        max-width: 880px;
-        margin: 180px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 300px;
-        text-align: left;
-        text-decoration: none;
-        color: #fff;
-        border: 2px solid #9b9b9b;
-      }
-      
-      .card h3 {
-        margin: 0;
-        color: #fff;
-        font-size: 24px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 16px;
-        color: #fff;
-      }
-      .link{
-        color: #fff;
-      }
-    //   .container {
-    //     display: grid;
-    //     //grid-template-columns: 50px 50px 50px 50px;
-    //     grid-template-rows: auto;
-    //     grid-template-areas:
-    //       "header header header header"
-    //       "main main . sidebar"
-    //       "footer footer footer footer";
-    //   }
-     
+      .row{
+      max-width: 880px;
+      margin: 180px auto 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;}
+      .card{padding: 18px 18px 24px;
+      width: 300px;
+      text-align: left;
+      text-decoration: none;
+      color: #fff;}
+      .link{color: #fff}
+      .copyRight{color: #fff; position: fixed; bottom: 0;}
+
     `}</style>
     </div>
 )
 export default landing
+                                   

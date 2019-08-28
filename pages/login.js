@@ -6,7 +6,6 @@ import Head from '../components/head'
 import Nav from '../components/nav'
 
 
-//this will be the authentication page
 const login = () => (
   
 <div className="landingPage">
